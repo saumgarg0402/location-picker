@@ -29,8 +29,8 @@ const LocationPicker = () => {
                 if(!!data?.results?.docs) {
                     return Promise.resolve(mapSuggestions(take(data.results.docs,6)));
                 }
-                return Promise.reject();
-            }).catch(e => { return Promise.reject() });
+                return Promise.resolve([]);
+            }).catch(e => { return Promise.resolve([]) });
         }
         return Promise.resolve([]); 
     }
@@ -41,7 +41,7 @@ const LocationPicker = () => {
     };
 
     const suggestionProps: IBasePickerSuggestionsProps = {
-        noResultsFoundText: 'No results',
+        noResultsFoundText: 'No results found',
         loadingText: 'Loading...',
         showForceResolve: () => false,
         forceResolveText: '',
