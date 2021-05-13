@@ -1,17 +1,23 @@
-import React from 'react';
-import { Stack } from '@fluentui/react/lib/Stack';
-import { containerStyles, pickerContainerStyles } from '../styles/schedulerStyles';
-import { Text } from '@fluentui/react/lib/Text';
 import LocationPicker from './LocationPicker';
+import React from 'react';
+import {
+    appHeaderTextStyles,
+    containerStyles,
+    pickerContainerStyles,
+    pickerLabelTextStyles,
+    schedulerTextStyles
+    } from '../styles/schedulerStyles';
+import { Stack } from '@fluentui/react/lib/Stack';
+import { Text } from '@fluentui/react/lib/Text';
 
 const Scheduler = () => {
 
     return (
         <Stack styles={containerStyles} horizontalAlign="center">
-            <Text styles={{ root: { color: '#fff', fontSize: 36, padding: 10}}} aria-label="Car rentals">Car Rentals</Text>
+            <Text styles={appHeaderTextStyles}>Car Rentals</Text>
             <Stack styles={pickerContainerStyles}>
-                <Text aria-label="Where are you going?" styles={{ root: { fontSize: 20, paddingTop: 10, fontWeight: 600}}}>Where are you going?</Text>
-                <Text aria-label="Seelct location below" styles={{ root: { fontSize: 16, paddingTop: 10, paddingBottom: 5, color: '#605E5C'}}}>Pick-up Location</Text>
+                <Text styles={schedulerTextStyles}>Where are you going?</Text>
+                <Text styles={pickerLabelTextStyles}>Pick-up Location</Text>
                 <Stack styles={{ root: {width: '70%'}}}>
                     <LocationPicker />
                 </Stack>

@@ -1,8 +1,8 @@
 # Location Picker
 
+A simple app to display a list of locations based on user entry.
+The app has been hosted at [Location Picker](https://saumgarg0402.github.io/location-picker/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-The app has been hosted at [Location Pikcer](https://saumgarg0402.github.io/location-picker/)
 
 ### Functionalities available
 - Enter alpha numeric characters to start searching for location

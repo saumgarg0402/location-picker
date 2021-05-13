@@ -1,18 +1,18 @@
-import React, { useState, useRef } from 'react';
-import { LocationPickerSchema } from '../schema/LocationPickerSchema';
+import classes from './LocationPicker.module.scss';
 import getSuggestions from '../utils/getSuggestions';
 import mapSuggestions from '../utils/mapSuggestions';
+import React, { useRef, useState } from 'react';
 import take from 'lodash-es/take';
+import { IPersonaProps } from '@fluentui/react/lib/Persona';
+import { LocationPickerSchema } from '../schema/LocationPickerSchema';
+import { Stack } from '@fluentui/react/lib/Stack';
+import { Text } from '@fluentui/react/lib/Text';
 import {
     IBasePickerSuggestionsProps,
     NormalPeoplePickerBase,
     IPickerItemProps,
 } from '@fluentui/react/lib/Pickers';
-import { Stack } from '@fluentui/react/lib/Stack';
-import { Text } from '@fluentui/react/lib/Text';
-import { IPersonaProps } from '@fluentui/react/lib/Persona';
 
-import classes from "./LocationPicker.module.scss";
 
 const LocationPicker = () => {
 
